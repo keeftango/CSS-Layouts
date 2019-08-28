@@ -1,0 +1,82 @@
+
+/*
+--------------------------------------------------------------------
+Flex-1
+--------------------------------------------------------------------
+*/
+nav.container-1 {
+    display: flex;
+    justify-content: space-between;
+
+    & > div {
+        flex:1;
+    }
+
+    div.block {
+        padding: 10px;
+    }
+    div.block-1 {
+        background-color: yellow;
+    }
+    div.block-2 {
+        background-color: blue;
+    }
+    div.block-3 {
+        background-color: red;
+    }
+}
+
+nav.container-2 {
+    display: flex;
+    justify-content: space-between;
+
+    /* push item (and everything after) to the right */
+    .push-right {
+        margin-left: auto;
+    }
+    div.block {
+        padding: 10px;
+    }
+    div.block-1 {
+        background-color: yellow;
+    }
+    div.block-2 {
+        background-color: blue;
+    }
+    div.block-3 {
+        background-color: red;
+    }
+}
+
+nav.container-3 {
+    display: flex;
+    justify-content: space-between;
+
+    /* Makes one of the cols fluid, others fixed */
+    .fluid-section {
+        flex: 1;
+    }
+
+    div.block {
+        padding: rem-calc(20);
+    }
+    div.block-1 {
+        background-color: yellow;
+    }
+    div.block-2 {
+        background-color: blue;
+    }
+    div.block-3 {
+        background-color: red;
+    }
+}
+
+.flex-container {
+    @media screen and (min-width: 640px){
+        display: flex;
+        /* Something happening at 640 and above */
+    }
+    @media screen and (max-width: 700px){
+        /* Something happening at 700 and below */
+    }
+}

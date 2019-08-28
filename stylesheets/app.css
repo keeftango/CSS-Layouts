@@ -39,3 +39,102 @@ body {
   grid-column-end: span 3;
   grid-row-end: span 4;
 }
+
+/*
+--------------------------------------------------------------------
+Flex-1
+--------------------------------------------------------------------
+*/
+/* line 7, ../sass/partials/_flex.scss */
+nav.container-1 {
+  display: flex;
+  justify-content: space-between;
+}
+/* line 11, ../sass/partials/_flex.scss */
+nav.container-1 > div {
+  flex: 1;
+}
+/* line 15, ../sass/partials/_flex.scss */
+nav.container-1 div.block {
+  padding: 10px;
+}
+/* line 18, ../sass/partials/_flex.scss */
+nav.container-1 div.block-1 {
+  background-color: yellow;
+}
+/* line 21, ../sass/partials/_flex.scss */
+nav.container-1 div.block-2 {
+  background-color: blue;
+}
+/* line 24, ../sass/partials/_flex.scss */
+nav.container-1 div.block-3 {
+  background-color: red;
+}
+
+/* line 29, ../sass/partials/_flex.scss */
+nav.container-2 {
+  display: flex;
+  justify-content: space-between;
+  /* push item (and everything after) to the right */
+}
+/* line 34, ../sass/partials/_flex.scss */
+nav.container-2 .push-right {
+  margin-left: auto;
+}
+/* line 37, ../sass/partials/_flex.scss */
+nav.container-2 div.block {
+  padding: 10px;
+}
+/* line 40, ../sass/partials/_flex.scss */
+nav.container-2 div.block-1 {
+  background-color: yellow;
+}
+/* line 43, ../sass/partials/_flex.scss */
+nav.container-2 div.block-2 {
+  background-color: blue;
+}
+/* line 46, ../sass/partials/_flex.scss */
+nav.container-2 div.block-3 {
+  background-color: red;
+}
+
+/* line 51, ../sass/partials/_flex.scss */
+nav.container-3 {
+  display: flex;
+  justify-content: space-between;
+  /* Makes one of the cols fluid, others fixed */
+}
+/* line 56, ../sass/partials/_flex.scss */
+nav.container-3 .fluid-section {
+  flex: 1;
+}
+/* line 60, ../sass/partials/_flex.scss */
+nav.container-3 div.block {
+  padding: rem-calc(20);
+}
+/* line 63, ../sass/partials/_flex.scss */
+nav.container-3 div.block-1 {
+  background-color: yellow;
+}
+/* line 66, ../sass/partials/_flex.scss */
+nav.container-3 div.block-2 {
+  background-color: blue;
+}
+/* line 69, ../sass/partials/_flex.scss */
+nav.container-3 div.block-3 {
+  background-color: red;
+}
+
+@media screen and (min-width: 640px) {
+  /* line 74, ../sass/partials/_flex.scss */
+  .flex-container {
+    display: flex;
+    /* Something happening at 640 and above */
+  }
+}
+@media screen and (max-width: 700px) {
+  /* line 74, ../sass/partials/_flex.scss */
+  .flex-container {
+    /* Something happening at 700 and below */
+  }
+}
